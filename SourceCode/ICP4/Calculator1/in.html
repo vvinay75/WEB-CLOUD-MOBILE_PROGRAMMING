@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+<p>Output of the following expressions are </p>
+<div ng-app=""
+     ng-init="firstName='John'; lastName='Doe'; empID = [1,2,3,4,5]; salaries = ['$10k', '$20k', '$30k', '$40k', '$50']; newSalaries = [50, 60];">
+    <div ng-init="employee={employeeName:'Doe, John',employeeID:'10',employeeSalary:'$100K'}; employees={emp2Name:'James, Mary', emp3Name:'John, Patricia', emp4Name:'Robert, Jennifer', emp5Name:'Michael, Elizabeth'};">
+        <p>Expression1: <br> My first expression is : Hello {{ firstName + " " + lastName }}! </p>
+        <p>Expression2: <br> {{ lastName + ", " + firstName }} </p>
+        <p>Expression3: <br> {{ lastName + ", " + firstName + " # " + empID[0] + " # " + salaries [0] }} </p>
+        <p>Expression4: <br> {{ empID[0]+empID[1]+empID[2]+empID[3]+empID[4] }} </p>
+        <p>Expression5: <br> {{ ""+empID[0]+empID[1]+empID[2]+empID[3]+empID[4] }} </p>
+        <p>Expression6: <br> {{ empID[0]+empID[1]+empID[2]+empID[3]+empID[4]+"" }} </p>
+        <p>Expression7: <br> {{ salaries[0]+salaries[1]+salaries[2]+salaries[3]+salaries[4] }} </p>
+        <p>Expression8: <br> {{ employees.emp2Name + "  " + empID[1] + "  " + salaries[1] }} </p>
+        <p>Expression9: <br> {{ empID[2] + " " + employees.emp3Name + "  " + salaries[2] }} </p>
+        <p>Expression10: <br> {{ empID[3] + " # " + employees.emp4Name + " # " + newSalaries[0] }} </p>
+        <p>Expression11: <br> {{ employees.emp5Name + " # " + empID[4] + " # " + newSalaries[1] }} </p>
+        <p>Expression12: <br> {{ salaries[0]+salaries[1]+salaries[2]+newSalaries[0]+newSalaries[1] }} </p>
+        <p>Expression13: <br> {{ newSalaries[0]+newSalaries[1]+salaries[0]+salaries[1]+salaries[2] }} </p>
+        <p>Expression14: <br> {{ salaries[0]+salaries[1]+salaries[2]+salaries[3]+salaries[4]+newSalaries[0]+newSalaries[1] }} </p>
+        <p>Expression15: <br> {{ newSalaries[0]+newSalaries[1]+salaries[0]+salaries[1]+salaries[2]+salaries[3]+salaries[4] }} </p>
+        <p>Expression16: <br> {{ newSalaries[0]+newSalaries[1] }} </p>
+        <p>Expression17: <br> {{ ""+ newSalaries[0]+newSalaries[1] }} </p>
+        <p>Expression18: <br> {{ newSalaries[0]+newSalaries[1]+"" }} </p>
+        <p>Expression19: <br> {{ "Employee Name: "+ lastName + ", " + firstName }} <br> {{"Employee ID: "+
+            employee.employeeID}} <br> {{"Employee Salary: "+ employee.employeeSalary }} </p>
+        <p>Expression20: <br> {{ "Employee Name: "+ employee.employeeName }} <br> {{"Employee ID: "+
+            employee.employeeID}} <br> {{"Employee Salary: "+ employee.employeeSalary }} </p>
+    </div>
+</div>
+</body>
+</html>
